@@ -96,7 +96,15 @@ void CMdSpi::OnRtnDepthMarketData(CThostFtdcDepthMarketDataField *pDepthMarketDa
 {
 	
 	//cerr << __FUNCTION__ << endl;
-	cerr << "--->>> 最新价=" << pDepthMarketData->LastPrice << endl;
+        cerr << "-------------------------------------------------------------"<<endl;
+        cerr << "| Symbol:" << pDepthMarketData->InstrumentID <<" \t| DateTime:"<< pDepthMarketData->UpdateTime<<"."<< pDepthMarketData->UpdateMillisec<< endl;
+        cerr << "| LastPrice: " << pDepthMarketData->LastPrice <<" \t| Ratio: "  <<  pDepthMarketData->CurrDelta;
+        cerr << "| Volume:"<< pDepthMarketData-> Volume << " \t| TurnOver: " << pDepthMarketData->Turnover << endl;
+        cerr << "| OpenInterest: " << pDepthMarketData-> OpenInterest << endl;
+        cerr << "| Open: " << pDepthMarketData-> OpenPrice << " \t| High: " << pDepthMarketData-> HighestPrice << " \t| Low: " << pDepthMarketData-> LowestPrice << endl;
+        cerr << "| Ask: " << pDepthMarketData-> AskPrice1 << " \t " << pDepthMarketData-> AskVolume1 << endl;
+        cerr << "| Bid: " << pDepthMarketData-> BidPrice1 << " \t " << pDepthMarketData-> BidVolume1 << endl;
+        cerr << "-------------------------------------------------------------"<<endl;
 	
 	string s = "/tmp/" ;
 	s.append(pDepthMarketData->InstrumentID);
