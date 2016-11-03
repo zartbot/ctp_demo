@@ -98,7 +98,7 @@ void CMdSpi::OnRtnDepthMarketData(CThostFtdcDepthMarketDataField *pDepthMarketDa
 	//cerr << __FUNCTION__ << endl;
         cerr << "-------------------------------------------------------------"<<endl;
         cerr << "| Symbol:" << pDepthMarketData->InstrumentID <<" \t| DateTime:"<< pDepthMarketData->UpdateTime<<"."<< pDepthMarketData->UpdateMillisec<< endl;
-        cerr << "| LastPrice: " << pDepthMarketData->LastPrice <<" \t| Ratio: "  <<  pDepthMarketData->CurrDelta;
+        cerr << "| LastPrice: " << pDepthMarketData->LastPrice <<" \t| Ratio: "  <<  pDepthMarketData->PreDelta << endl;;
         cerr << "| Volume:"<< pDepthMarketData-> Volume << " \t| TurnOver: " << pDepthMarketData->Turnover << endl;
         cerr << "| OpenInterest: " << pDepthMarketData-> OpenInterest << endl;
         cerr << "| Open: " << pDepthMarketData-> OpenPrice << " \t| High: " << pDepthMarketData-> HighestPrice << " \t| Low: " << pDepthMarketData-> LowestPrice << endl;
